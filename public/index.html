@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pong Dual 1 vs 1</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Pong Dual</h1>
+      <div class="hud">
+        <span id="role">Conectando…</span>
+        <span id="ping">— ms</span>
+      </div>
+    </header>
+
+    <div class="stage">
+      <canvas id="game" width="800" height="450" aria-label="Campo de juego"></canvas>
+      <div id="overlay" class="overlay">
+        <p id="overlay-title"></p>
+        <p id="overlay-sub"></p>
+        <button id="btn-ready" type="button" hidden>Listo</button>
+        <button id="btn-rematch" type="button" hidden>Revancha</button>
+      </div>
+    </div>
+
+    <p class="help">Controles: <kbd>W</kbd>/<kbd>S</kbd> o <kbd>↑</kbd>/<kbd>↓</kbd></p>
+  </main>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
